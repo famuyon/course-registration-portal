@@ -1,0 +1,475 @@
+.register-courses-container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.register-courses-container *,
+.register-courses-container *::before,
+.register-courses-container *::after {
+  box-sizing: border-box;
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.description {
+  color: #718096;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Main Content Layout */
+.main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Course Content Area */
+.course-content-area {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+}
+
+.error-message {
+  background-color: #fed7d7;
+  color: #c53030;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid #feb2b2;
+}
+
+.success-message {
+  background-color: #c6f6d5;
+  color: #2f855a;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid #9ae6b4;
+}
+
+/* Course Display Section */
+.course-display-section {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 2px solid #e2e8f0;
+}
+
+/* Tab Header */
+.tab-header {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.tab-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px 6px 0 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tab-button.active {
+  background-color: #3182ce;
+}
+
+.tab-button:hover {
+  background-color: #2c5282;
+}
+
+/* Select All Section */
+.select-all-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.select-all-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0;
+  user-select: none;
+}
+
+.select-all-checkbox {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  cursor: pointer;
+  transform: scale(1.2);
+  accent-color: #ffffff;
+}
+
+.select-all-text {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.select-all-hint {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.select-all-label:hover .select-all-text {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Course Table Container */
+.course-table-container {
+  background-color: white;
+  border-radius: 0 8px 8px 8px;
+  border: 2px solid #e2e8f0;
+  overflow: hidden;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* No Courses Message */
+.no-courses-message {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #f8fafc;
+  color: #4a5568;
+}
+
+.no-courses-message p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.no-courses-message p:first-child {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+/* New Courses Table */
+.new-courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.new-courses-table th,
+.new-courses-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.new-courses-table th {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.new-courses-table th:first-child {
+  position: relative;
+}
+
+.new-courses-table th:first-child input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transform: scale(1.1);
+  accent-color: #ffffff;
+}
+
+.new-courses-table td {
+  font-size: 0.9rem;
+  color: #2d3748;
+}
+
+.new-courses-table td input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transform: scale(1.1);
+  accent-color: #4a90e2;
+}
+
+.new-courses-table .course-title {
+  text-align: left;
+  padding-left: 12px;
+}
+
+.new-courses-table .course-code {
+  font-weight: 600;
+  color: #3182ce;
+}
+
+.new-courses-table .course-type {
+  font-weight: 600;
+  color: #e53e3e;
+}
+
+.new-courses-table .course-units {
+  font-weight: 600;
+}
+
+.new-courses-table tbody tr:hover {
+  background-color: #f7fafc;
+}
+
+/* Outstanding Section */
+.outstanding-section {
+  border-top: 2px solid #e2e8f0;
+  margin-top: 1rem;
+}
+
+.outstanding-header {
+  background-color: #ffd700;
+  color: #2d3748;
+  font-weight: 700;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.outstanding-message {
+  background-color: #fffbeb;
+  border: 1px solid #f59e0b;
+  padding: 2rem;
+  text-align: center;
+  color: #92400e;
+}
+
+.outstanding-message p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.outstanding-message p:first-child {
+  font-weight: 600;
+  color: #78350f;
+}
+
+.outstanding-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.outstanding-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #2d3748;
+}
+
+.outstanding-table tr:hover {
+  background-color: #f7fafc;
+}
+
+/* Comments Section */
+.comments-section {
+  border-top: 2px solid #e2e8f0;
+  margin-top: 1rem;
+  background-color: #f8fafc;
+}
+
+.comments-header {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.comments-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.comments-subtitle {
+  margin: 0;
+  color: #718096;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.comments-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #2d3748;
+  background-color: white;
+  margin: 1.5rem;
+  margin-bottom: 0.5rem;
+  resize: vertical;
+  min-height: 100px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.comments-textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.comments-textarea::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.character-count {
+  text-align: right;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  color: #718096;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* Form Footer */
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-top: 2px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+.total-units {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+.legend {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.submit-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #3182ce;
+}
+
+.submit-button:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-courses-container {
+    padding: 1rem;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .course-content-area {
+    padding: 1rem;
+  }
+  
+  .new-courses-table th,
+  .new-courses-table td {
+    padding: 8px 4px;
+    font-size: 0.8rem;
+  }
+  
+  .form-footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .legend {
+    justify-content: center;
+  }
+
+  .comments-textarea {
+    margin: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    min-height: 80px;
+  }
+
+  .comments-header {
+    padding: 1rem;
+  }
+
+  .comments-header h3 {
+    font-size: 1rem;
+  }
+
+  .character-count {
+    padding: 0 1rem 1rem 1rem;
+  }
+} 

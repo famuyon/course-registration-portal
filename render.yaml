@@ -4,11 +4,8 @@ services:
     name: course-registration-frontend
     env: static
     plan: starter
-    buildCommand: |
-      cd frontend
-      npm install
-      npm run build
-    staticPublishPath: frontend/build
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
     envVars:
       - key: REACT_APP_API_URL
         value: https://your-backend-url.railway.app/api 

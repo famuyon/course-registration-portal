@@ -1,0 +1,1040 @@
+/* Print Course Form Styles */
+.print-course-form {
+  font-family: Arial, sans-serif;
+  line-height: 1.1;
+}
+
+.no-print {
+  padding: 20px;
+  text-align: center;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.print-btn {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.print-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+}
+
+.course-info {
+  color: #333;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* No Approved Courses Styles */
+.no-approved-courses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 16px;
+  margin: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.message-container {
+  text-align: center;
+  padding: 50px;
+  max-width: 550px;
+}
+
+.message-container h3 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.message-container p {
+  color: #495057;
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.status-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border: 2px solid #ffc107;
+  border-radius: 12px;
+  padding: 20px;
+  color: #856404;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+}
+
+.status-icon {
+  font-size: 24px;
+}
+
+/* Document Styles */
+.course-form-document {
+  max-width: 210mm;
+  margin: 0 auto;
+  background: white;
+  padding: 8mm;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-size: 10px;
+  color: #000;
+  line-height: 1.2;
+  min-height: 297mm;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+/* Header Section */
+.document-header {
+  border: 2px solid #333;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  position: relative;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.university-logo {
+  width: 50px;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.university-logo img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.university-info {
+  flex: 1;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.university-info h1 {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+  color: #2c3e50;
+}
+
+.university-info p {
+  font-size: 9px;
+  margin: 2px 0;
+  font-weight: normal;
+  color: #34495e;
+}
+
+.student-photo {
+  width: 65px;
+  height: 75px;
+  border: 2px solid #333;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  font-size: 8px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.student-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-photo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #6c757d;
+  text-align: center;
+}
+
+/* Student Name Section */
+.student-name-section {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.student-name-section h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 6px;
+  display: inline-block;
+  min-width: 65%;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+/* Student Information Section */
+.student-info-section {
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.info-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.qr-section {
+  width: 85px;
+  flex-shrink: 0;
+  text-align: center;
+  border: 2px solid #333;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-section {
+  flex: 1;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.detail-row .label {
+  width: 140px;
+  font-weight: bold;
+  font-size: 10px;
+  color: #495057;
+}
+
+.detail-row .value {
+  flex: 1;
+  font-size: 10px;
+  border-bottom: 1px solid #ced4da;
+  padding-bottom: 4px;
+  min-height: 16px;
+  color: #212529;
+  padding-left: 8px;
+}
+
+/* Course Information Section */
+.course-info-section {
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.course-info-section h3 {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 15px 0;
+  text-decoration: underline;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+}
+
+/* Table Container with Watermark */
+.table-container {
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: visible;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  z-index: 5;
+}
+
+.approved-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  font-size: 80px;
+  font-weight: 900;
+  color: rgba(220, 53, 69, 0.25) !important;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  text-shadow: 1px 1px 2px rgba(220, 53, 69, 0.15);
+  letter-spacing: 16px;
+  font-family: 'Arial Black', Arial, sans-serif;
+  text-transform: uppercase;
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  mix-blend-mode: multiply;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 9px;
+  position: relative;
+  z-index: 1;
+}
+
+.course-table th,
+.course-table td {
+  border: 1px solid #000;
+  padding: 4px 6px;
+  text-align: left;
+  vertical-align: middle;
+  height: 20px;
+}
+
+.course-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sn-header-left,
+.sn-header-right {
+  width: 30px;
+  text-align: center;
+}
+
+.carryover-section-header,
+.proposed-section-header {
+  background-color: #f8f9fa;
+  text-align: center;
+  font-weight: bold;
+}
+
+.course-summary-header {
+  width: 120px;
+}
+
+.course-code-header {
+  width: 80px;
+}
+
+.course-title-header {
+  width: 200px;
+}
+
+.unit-header {
+  width: 40px;
+  text-align: center;
+}
+
+.sn-cell-left,
+.sn-cell-right {
+  text-align: center;
+  width: 30px;
+}
+
+.course-summary-cell {
+  width: 120px;
+}
+
+.carryover-code-cell {
+  width: 80px;
+}
+
+.course-code-cell {
+  width: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.course-title-cell {
+  width: 200px;
+}
+
+.course-unit-cell {
+  width: 40px;
+  text-align: center;
+}
+
+.total-row {
+  font-weight: bold;
+}
+
+.total-label {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.total-units {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Signature Section */
+.signature-section {
+  margin: 20px 0;
+  flex-shrink: 0;
+  background: rgba(248, 249, 250, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.student-signature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 10px;
+}
+
+.signature-label {
+  font-weight: bold;
+  color: #495057;
+}
+
+.signature-line {
+  width: 180px;
+  height: 30px;
+  border-bottom: 2px solid #333;
+  flex-shrink: 0;
+  margin-top: 20px;
+}
+
+.date-label {
+  font-weight: bold;
+  color: #495057;
+}
+
+.date-line {
+  width: 80px;
+  height: 30px;
+  border-bottom: 2px solid #333;
+  flex-shrink: 0;
+  margin-top: 20px;
+}
+
+/* Official Section */
+.official-section {
+  margin-top: auto;
+  padding: 20px;
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.official-section h3 {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 15px 0;
+  text-decoration: underline;
+  color: #2c3e50;
+}
+
+.approval-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.approval-item {
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.approval-label {
+  font-weight: bold;
+  font-size: 10px;
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.approval-line {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 20px;
+  font-size: 9px;
+}
+
+.name-signature-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 3px;
+}
+
+.field-label {
+  font-size: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #000;
+}
+
+.inline-signature {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex: 1;
+  margin-left: 80px;
+}
+
+.officer-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 30px;
+  color: #000;
+}
+
+.inline-signature-image {
+  height: 60px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.signature-placeholder {
+  flex: 1;
+  height: 25px;
+}
+
+.date-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.date-value {
+  font-size: 10px;
+  min-width: 80px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 2px;
+  text-align: center;
+  color: #000;
+}
+
+/* Document Footer */
+.document-footer {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 2px solid #dee2e6;
+  font-size: 8px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* Print Media Styles */
+@media print {
+  /* Remove all non-essential elements */
+  .no-print {
+    display: none !important;
+    visibility: hidden !important;
+    background: none !important;
+  }
+
+  /* Optimize page setup to start from top */
+  @page {
+    size: A4;
+    margin: 1mm !important;
+    background: white;
+  }
+
+  /* Clean body and universal styles */
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 9px !important;
+    background: white !important;
+    color: black !important;
+    line-height: 1.2 !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-sizing: border-box !important;
+  }
+
+  *:not(.approved-watermark) {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Clean document layout - start from very top */
+  .course-form-document {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0.5mm !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: white !important;
+    min-height: auto !important;
+    height: auto !important;
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+    display: block !important;
+    color: black !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Header section - no top margin */
+  .document-header {
+    border: 1px solid black !important;
+    border-radius: 0 !important;
+    margin: 0 0 1mm 0 !important;
+    background: white !important;
+    box-shadow: none !important;
+  }
+
+  .header-content {
+    background: white !important;
+    background-image: none !important;
+    padding: 1mm !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .university-logo {
+    width: 12mm !important;
+    margin-right: 2mm !important;
+  }
+
+  .university-info {
+    flex: 1 !important;
+    text-align: center !important;
+  }
+
+  .university-info h1 {
+    font-size: 12px !important;
+    color: black !important;
+    font-weight: bold !important;
+    margin: 0 0 0.5mm 0 !important;
+  }
+
+  .university-info p {
+    font-size: 9px !important;
+    color: black !important;
+    margin: 0.3mm 0 !important;
+  }
+
+  .student-photo {
+    width: 15mm !important;
+    height: 18mm !important;
+    border: 1px solid black !important;
+    background: white !important;
+    border-radius: 0 !important;
+  }
+
+  /* Student name section */
+  .student-name-section {
+    margin: 0.5mm 0 !important;
+    background: white !important;
+    text-align: center !important;
+  }
+
+  .student-name-section h2 {
+    font-size: 14px !important;
+    border-bottom: 1px solid black !important;
+    padding-bottom: 0.5mm !important;
+    font-weight: bold !important;
+    display: inline-block !important;
+    min-width: 60% !important;
+  }
+
+  /* Student info section */
+  .student-info-section {
+    margin-bottom: 1mm !important;
+    background: white !important;
+    border: 1px solid black !important;
+    border-radius: 0 !important;
+    padding: 1mm !important;
+    box-shadow: none !important;
+  }
+
+  .info-layout {
+    display: flex !important;
+    gap: 2mm !important;
+  }
+
+  .qr-section {
+    border: 1px solid black !important;
+    background: white !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 1mm !important;
+    width: 20mm !important;
+  }
+
+  .details-section {
+    flex: 1 !important;
+  }
+
+  .detail-row {
+    display: flex !important;
+    margin-bottom: 1mm !important;
+    align-items: center !important;
+  }
+
+  .detail-row .label {
+    width: 30mm !important;
+    font-weight: bold !important;
+    font-size: 9px !important;
+  }
+
+  .detail-row .value {
+    flex: 1 !important;
+    font-size: 9px !important;
+    border: none !important;
+    border-bottom: none !important;
+    background: white !important;
+    padding: 0.5mm 1mm !important;
+  }
+
+  /* Course info section */
+  .course-info-section {
+    margin-bottom: 1mm !important;
+    background: white !important;
+  }
+
+  .course-info-section h3 {
+    font-size: 12px !important;
+    margin-bottom: 1mm !important;
+    text-align: center !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+  }
+
+  .table-container {
+    position: relative !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-bottom: 1mm !important;
+    overflow: visible !important;
+    z-index: 5 !important;
+  }
+
+  .course-table {
+    border-collapse: collapse !important;
+    background: transparent !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  .course-table th,
+  .course-table td {
+    font-size: 10px !important;
+    padding: 0.8mm !important;
+    border: 1px solid black !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    height: auto !important;
+    text-align: center !important;
+  }
+
+  .course-table th {
+    background: rgba(255, 255, 255, 0.8) !important;
+    font-weight: bold !important;
+    font-size: 10px !important;
+  }
+
+  /* Signature section */
+  .signature-section {
+    margin: 1mm 0 !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    padding: 1mm !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .student-signature {
+    display: flex !important;
+    align-items: center !important;
+    gap: 2mm !important;
+  }
+
+  .signature-label {
+    font-size: 9px !important;
+    font-weight: bold !important;
+  }
+
+  .signature-line {
+    width: 40mm !important;
+    border-bottom: 1px solid black !important;
+    height: 8mm !important;
+    margin-top: 6mm !important;
+  }
+
+  .date-label {
+    font-size: 9px !important;
+    font-weight: bold !important;
+  }
+
+  .date-line {
+    width: 20mm !important;
+    border-bottom: 1px solid black !important;
+    height: 8mm !important;
+    margin-top: 6mm !important;
+  }
+
+  /* Official section */
+  .official-section {
+    margin-top: 1mm !important;
+    margin-bottom: 0 !important;
+    padding: 1mm !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid black !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .official-section h3 {
+    font-size: 10px !important;
+    margin: 0 0 1mm 0 !important;
+    text-align: center !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+  }
+
+  .approval-item {
+    margin-bottom: 1.5mm !important;
+    padding: 0.5mm 0 !important;
+    background: white !important;
+    border: none !important;
+  }
+
+  .approval-label {
+    font-size: 9px !important;
+    margin-bottom: 0.5mm !important;
+    font-weight: bold !important;
+  }
+
+  .approval-line {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1mm !important;
+    margin-left: 3mm !important;
+    margin-right: 3mm !important;
+    font-size: 8px !important;
+  }
+
+  .name-signature-line {
+    display: flex !important;
+    align-items: center !important;
+    gap: 2mm !important;
+    min-height: 4mm !important;
+    border-bottom: 1px solid black !important;
+    padding-bottom: 0.5mm !important;
+  }
+
+  .field-label {
+    font-size: 9px !important;
+    font-weight: bold !important;
+    color: black !important;
+    white-space: nowrap !important;
+  }
+
+  .inline-signature {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6mm !important;
+    flex: 1 !important;
+    margin-left: 18mm !important;
+  }
+
+  .officer-name {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: black !important;
+    margin-right: 6mm !important;
+  }
+
+  .inline-signature-image {
+    height: 12mm !important;
+    max-width: 40mm !important;
+    object-fit: contain !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin-left: 4mm !important;
+  }
+
+  .signature-placeholder {
+    flex: 1 !important;
+    height: 6mm !important;
+  }
+
+  .date-section {
+    display: flex !important;
+    align-items: center !important;
+    gap: 3mm !important;
+    margin-top: 1mm !important;
+  }
+
+  .date-value {
+    font-size: 9px !important;
+    min-width: 25mm !important;
+    border-bottom: 1px solid black !important;
+    padding-bottom: 1mm !important;
+    text-align: center !important;
+    color: black !important;
+  }
+
+  /* Print watermark - extremely subtle background */
+  .approved-watermark {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 55px !important;
+    color: rgba(220, 53, 69, 0.2) !important;
+    background-color: transparent !important;
+    font-weight: 900 !important;
+    letter-spacing: 10px !important;
+    text-shadow: none !important;
+    z-index: 20 !important;
+    font-family: 'Arial Black', Arial, sans-serif !important;
+    text-transform: uppercase !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) rotate(-15deg) !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background: none !important;
+    border: 1px solid rgba(220, 53, 69, 0.15) !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    -webkit-filter: none !important;
+    filter: none !important;
+    -webkit-transform: translate(-50%, -50%) rotate(-15deg) !important;
+    -moz-transform: translate(-50%, -50%) rotate(-15deg) !important;
+    -ms-transform: translate(-50%, -50%) rotate(-15deg) !important;
+    box-shadow: none !important;
+    mix-blend-mode: normal !important;
+  }
+
+
+}
+
+/* Responsive Design */
+@media screen and (max-width: 800px) {
+  .course-form-document {
+    padding: 10px;
+    font-size: 8px;
+  }
+  
+  .university-info h1 {
+    font-size: 10px;
+  }
+  
+  .student-name-section h2 {
+    font-size: 12px;
+  }
+}
+
+/* Student Signature Styles */
+.signature-container {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  margin: 0 10px;
+}
+
+.signature-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  min-height: 40px;
+  width: 200px;
+}
+
+.student-signature-image {
+  max-width: 180px;
+  max-height: 35px;
+  object-fit: contain;
+  filter: contrast(1.2);
+}
+
+.signature-line {
+  border-bottom: 1px solid #000;
+  width: 200px;
+  height: 1px;
+  margin: 0 10px;
+}
+
+/* Print-specific styles for signatures */
+@media print {
+  .signature-image-container {
+    background: transparent;
+    border: 1px solid #000;
+  }
+  
+  .student-signature-image {
+    filter: contrast(1.4) brightness(0.8);
+  }
+} 

@@ -1,0 +1,331 @@
+.role-selection-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.role-selection-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='m0 40l40-40h-40v40zm40 0v-40h-40l40 40z'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.role-selection-overlay {
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.role-selection-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 1000px;
+  width: 100%;
+}
+
+.welcome-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.welcome-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.welcome-header p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin: 0;
+  font-weight: 500;
+}
+
+.role-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.role-card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.role-icon {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Student Illustration */
+.student-illustration {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.student-figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.student-head {
+  width: 30px;
+  height: 30px;
+  background: #4a5568;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.student-body {
+  width: 40px;
+  height: 35px;
+  background: #667eea;
+  border-radius: 8px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.student-laptop {
+  width: 50px;
+  height: 30px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #cbd5e0;
+}
+
+.student-laptop::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  height: 15px;
+  background: #2d3748;
+  border-radius: 2px;
+}
+
+/* Admin/Computer Illustration */
+.admin-illustration {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.computer-screen {
+  width: 70px;
+  height: 50px;
+  background: #2d3748;
+  border-radius: 6px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.screen-content {
+  padding: 6px;
+  height: 100%;
+}
+
+.screen-header {
+  height: 6px;
+  background: #4a5568;
+  border-radius: 2px;
+  margin-bottom: 4px;
+}
+
+.screen-body {
+  display: flex;
+  align-items: end;
+  height: calc(100% - 10px);
+  gap: 3px;
+  justify-content: center;
+}
+
+.chart-bar {
+  width: 8px;
+  background: #667eea;
+  border-radius: 1px;
+}
+
+.bar1 { height: 60%; }
+.bar2 { height: 80%; }
+.bar3 { height: 45%; }
+
+.computer-base {
+  width: 80px;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 20px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.computer-base::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 3px;
+  background: #cbd5e0;
+  border-radius: 2px;
+}
+
+.role-info {
+  margin-bottom: 2rem;
+}
+
+.role-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+}
+
+.role-info p {
+  font-size: 0.95rem;
+  color: #718096;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.continue-btn {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.student-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.student-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.officer-btn {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  color: white;
+}
+
+.officer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);
+}
+
+.hod-btn {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+}
+
+.hod-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+.school-officer-btn {
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  color: #2d3748;
+}
+
+.school-officer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168, 237, 234, 0.4);
+}
+
+.continue-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .role-selection-container {
+    padding: 1rem;
+  }
+  
+  .role-selection-card {
+    padding: 2rem;
+  }
+  
+  .welcome-header h1 {
+    font-size: 2rem;
+  }
+  
+  .welcome-header p {
+    font-size: 1rem;
+  }
+  
+  .role-cards-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .role-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .role-icon {
+    height: 100px;
+  }
+} 

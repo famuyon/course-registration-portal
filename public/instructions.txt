@@ -1,0 +1,21 @@
+FUTA LOGO SETUP INSTRUCTIONS
+=============================
+
+To add your FUTA logo to the course form:
+
+1. Save the FUTA logo image you provided as "futa-logo.png"
+2. Copy it to this exact location:
+   C:\Users\abdul\course_registration_portal\frontend\public\futa-logo.png
+
+3. Restart your development server by:
+   - Stopping the current server (Ctrl+C in the terminal running npm start)
+   - Running "npm start" again
+
+4. The logo will automatically appear in the top left corner of the course form
+
+The logo will be automatically sized to 85x85 pixels with professional styling.
+
+If you need help, you can also:
+- Right-click and save the logo image from your message
+- Make sure it's named exactly "futa-logo.png"
+- Place it in the public folder shown above 

@@ -1,0 +1,580 @@
+.approval-container {
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.approval-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='m0 40l40-40h-40v40zm40 0v-40h-40l40 40z'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.approval-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.approval-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.approval-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.error-message, .success-message {
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.error-message {
+  background: rgba(245, 101, 101, 0.9);
+  color: white;
+  border: 1px solid rgba(245, 101, 101, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.success-message {
+  background: rgba(72, 187, 120, 0.9);
+  color: white;
+  border: 1px solid rgba(72, 187, 120, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: white;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.access-denied {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.access-denied h2 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.access-denied p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.no-registrations {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.no-registrations h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.no-registrations p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.registrations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 2rem;
+  align-items: start;
+  width: 100%;
+}
+
+.registration-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Status-based card styling */
+.registration-card.approved {
+  background: rgba(240, 253, 244, 0.95);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.registration-card.rejected {
+  background: rgba(254, 242, 242, 0.95);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.registration-card.pending {
+  background: rgba(254, 252, 232, 0.95);
+  border-color: rgba(234, 179, 8, 0.3);
+}
+
+/* Status badge */
+.registration-status {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.status-badge.pending {
+  background: rgba(234, 179, 8, 0.2);
+  color: #92400e;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.status-badge.approved {
+  background: rgba(34, 197, 94, 0.2);
+  color: #166534;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status-badge.rejected {
+  background: rgba(239, 68, 68, 0.2);
+  color: #991b1b;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.student-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  min-height: auto;
+  width: 100%;
+}
+
+.student-avatar {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.student-details {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.student-details h3 {
+  margin: 0 0 0.75rem 0;
+  color: #2d3748;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.student-meta {
+  margin: 0;
+  color: #718096;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.student-meta strong {
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.registration-info {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.info-item {
+  background: rgba(247, 250, 252, 0.8);
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  font-size: 0.9rem;
+  text-align: center;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.info-item strong {
+  color: #4a5568;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.courses-section {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.courses-section h4 {
+  margin: 0 0 1rem 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.course-item {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  background: rgba(247, 250, 252, 0.6);
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  font-size: 0.9rem;
+  min-width: 0;
+  width: 100%;
+}
+
+.course-code {
+  font-weight: 700;
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.course-title {
+  color: #4a5568;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+.course-units {
+  color: #718096;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-align: right;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.student-comments-section {
+  margin-bottom: 1.5rem;
+  background: rgba(255, 248, 220, 0.6);
+  border: 1px solid rgba(254, 230, 138, 0.5);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.student-comments-section h4 {
+  margin: 0 0 0.75rem 0;
+  color: #92400e;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.comments-box {
+  background: white;
+  border: 1px solid rgba(254, 230, 138, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.comments-box p {
+  margin: 0;
+  color: #4a5568;
+  line-height: 1.5;
+  font-style: italic;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: auto;
+  width: 100%;
+}
+
+.approve-btn,
+.reject-btn,
+.edit-courses-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 120px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.approve-btn {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+.approve-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(72, 187, 120, 0.4);
+}
+
+.reject-btn {
+  background: linear-gradient(135deg, #f56565, #e53e3e);
+  color: white;
+  box-shadow: 0 4px 12px rgba(245, 101, 101, 0.3);
+}
+
+.reject-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 101, 101, 0.4);
+}
+
+.edit-courses-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.edit-courses-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.approve-btn:disabled,
+.reject-btn:disabled,
+.edit-courses-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 1200px) {
+  .registrations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .approval-container {
+    padding: 1rem;
+  }
+
+  .registrations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .registration-card {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .approve-btn,
+  .reject-btn,
+  .edit-courses-btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .access-denied,
+  .no-registrations {
+    padding: 2rem 1rem;
+  }
+
+  .course-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .course-title {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .approval-container {
+    padding: 0.75rem;
+  }
+
+  .registration-card {
+    padding: 1rem;
+  }
+
+  .student-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    min-height: auto;
+  }
+
+  .student-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.1rem;
+  }
+
+  .student-details h3 {
+    font-size: 1.1rem;
+  }
+
+  .courses-section h4 {
+    font-size: 1rem;
+  }
+
+  .student-comments-section h4 {
+    font-size: 0.95rem;
+  }
+
+  .comments-box {
+    padding: 0.5rem;
+  }
+
+  .comments-box p {
+    font-size: 0.9rem;
+  }
+
+  .approve-btn,
+  .reject-btn,
+  .edit-courses-btn {
+    padding: 0.875rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .access-denied,
+  .no-registrations {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .access-denied h2,
+  .no-registrations h3 {
+    font-size: 1.3rem;
+  }
+} 
