@@ -3,7 +3,7 @@ services:
   - type: web
     name: course-registration-backend
     env: python
-    plan: free
+    plan: starter
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn backend.wsgi:application
     envVars:
@@ -28,7 +28,7 @@ services:
   - type: web
     name: course-registration-frontend
     env: static
-    plan: free
+    plan: starter
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: frontend/build
     envVars:
@@ -39,4 +39,4 @@ databases:
   - name: course-registration-db
     databaseName: course_registration
     user: course_registration_user
-    plan: free 
+    plan: starter 
