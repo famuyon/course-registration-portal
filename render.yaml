@@ -4,7 +4,10 @@ services:
     name: course-registration-frontend
     env: static
     plan: starter
-    buildCommand: cd frontend && npm install && npm run build
+    buildCommand: |
+      cd frontend
+      npm install
+      npm run build
     staticPublishPath: frontend/build
     envVars:
       - key: REACT_APP_API_URL
