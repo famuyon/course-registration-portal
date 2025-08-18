@@ -1,0 +1,42 @@
+services:
+  # Backend API Service
+  - type: web
+    name: course-registration-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.16
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: false
+      - key: ALLOWED_HOSTS
+        value: .onrender.com
+      - key: DATABASE_URL
+        fromDatabase:
+          name: course-registration-db
+          property: connectionString
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://course-registration-frontend.onrender.com
+      - key: CSRF_TRUSTED_ORIGINS
+        value: https://course-registration-frontend.onrender.com
+
+  # Frontend Service
+  - type: web
+    name: course-registration-frontend
+    env: static
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://course-registration-backend.onrender.com/api
+
+databases:
+  - name: course-registration-db
+    databaseName: course_registration
+    user: course_registration_user
+    plan: free 

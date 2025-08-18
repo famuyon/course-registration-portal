@@ -1,0 +1,58 @@
+[
+    {
+        "model": "courses.course",
+        "pk": 1,
+        "fields": {
+            "code": "CSC101",
+            "title": "Introduction to Computer Science",
+            "units": 3,
+            "department": 1,
+            "semester": 1,
+            "level": 100,
+            "description": "Basic concepts of computer science and programming",
+            "is_active": true
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 2,
+        "fields": {
+            "code": "CSC102",
+            "title": "Programming Fundamentals",
+            "units": 3,
+            "department": 1,
+            "semester": 2,
+            "level": 100,
+            "description": "Introduction to programming concepts and problem solving",
+            "is_active": true
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 3,
+        "fields": {
+            "code": "CSC201",
+            "title": "Data Structures",
+            "units": 3,
+            "department": 1,
+            "semester": 1,
+            "level": 200,
+            "description": "Study of fundamental data structures and algorithms",
+            "is_active": true
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 4,
+        "fields": {
+            "code": "CSC202",
+            "title": "Object-Oriented Programming",
+            "units": 3,
+            "department": 1,
+            "semester": 2,
+            "level": 200,
+            "description": "Object-oriented programming concepts and design patterns",
+            "is_active": true
+        }
+    }
+] 

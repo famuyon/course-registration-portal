@@ -1,0 +1,56 @@
+MANUAL POWERSHELL COMMANDS FOR COURSE REGISTRATION PORTAL
+=========================================================
+
+Option 1: Use the PowerShell Script
+-----------------------------------
+powershell -ExecutionPolicy Bypass -File .\start-servers-powershell.ps1
+
+
+Option 2: Use the Batch File  
+-----------------------------
+.\start-app.bat
+
+
+Option 3: Start Servers Manually (Two separate PowerShell windows)
+-------------------------------------------------------------------
+
+WINDOW 1 - Backend Server:
+python manage.py runserver
+
+WINDOW 2 - Frontend Server:
+cd frontend  
+npm start
+
+SETUP COMMANDS (Run once after initial setup):
+==============================================
+python manage.py setup_hod
+python manage.py setup_school_officer
+
+
+Option 4: Start Both in Background (One command)
+------------------------------------------------
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd backend; python manage.py runserver"
+Start-Sleep -Seconds 3
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd frontend; npm start"
+
+
+IMPORTANT NOTES:
+===============
+- Don't use "&&" in PowerShell (use ";" instead)
+- Always use ".\" prefix for batch files: .\start-app.bat
+- Use semicolon ";" to chain commands in PowerShell instead of "&&"
+
+
+APPLICATION URLS AFTER STARTING:
+================================
+Frontend: http://localhost:3000
+Backend API: http://127.0.0.1:8000/api
+Admin Panel: http://127.0.0.1:8000/admin
+
+LOGIN CREDENTIALS:
+==================
+Student: student1 / password123
+Student: student2 / password123
+Registration Officer: admin / admin123
+Head of Department: HOD / HOD123
+School Officer: schoolofficer / schoolofficer123 
