@@ -1,0 +1,8 @@
+frontend/
+package.json
+package-lock.json
+tsconfig.json
+node_modules/
+src/
+public/
+render.yaml
